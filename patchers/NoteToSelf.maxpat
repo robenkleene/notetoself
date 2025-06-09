@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 596.0, 459.0, 415.0, 643.0 ],
+		"rect" : [ 538.0, 232.0, 1145.0, 748.0 ],
 		"openinpresentation" : 1,
 		"default_fontsize" : 10.0,
 		"default_fontname" : "Arial Bold",
@@ -19,6 +19,32 @@
 		"objectsnaponopen" : 0,
 		"subpatcher_template" : "roben-kleene-max-for-live",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-11",
+					"maxclass" : "live.numbox",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "float" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 8.0, 456.0, 44.0, 15.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 8.0, 40.0, 44.0, 15.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_longname" : "Note",
+							"parameter_modmode" : 3,
+							"parameter_shortname" : "Note",
+							"parameter_type" : 0,
+							"parameter_unitstyle" : 8
+						}
+
+					}
+,
+					"varname" : "Note"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-38",
 					"maxclass" : "newobj",
@@ -124,7 +150,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 136.0, 72.0, 56.0, 16.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 8.0, 96.0, 56.0, 16.0 ],
+					"presentation_rect" : [ 8.0, 112.0, 56.0, 16.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "val1", "val2" ],
@@ -177,7 +203,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 56.0, 416.0, 23.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 8.0, 48.0, 23.0, 18.0 ],
+					"presentation_rect" : [ 8.0, 64.0, 23.0, 18.0 ],
 					"text" : "Vel"
 				}
 
@@ -192,19 +218,19 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 56.0, 432.0, 44.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 8.0, 64.0, 44.0, 15.0 ],
+					"presentation_rect" : [ 8.0, 80.0, 44.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "live.numbox[1]",
+							"parameter_longname" : "Vel",
 							"parameter_modmode" : 3,
-							"parameter_shortname" : "live.numbox",
+							"parameter_shortname" : "Vel",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 0
 						}
 
 					}
 ,
-					"varname" : "live.numbox[1]"
+					"varname" : "Vel"
 				}
 
 			}
@@ -221,16 +247,16 @@
 					"presentation_rect" : [ 8.0, 24.0, 44.0, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
-							"parameter_longname" : "live.numbox",
+							"parameter_longname" : "Pitch",
 							"parameter_modmode" : 3,
-							"parameter_shortname" : "live.numbox",
+							"parameter_shortname" : "Pitch",
 							"parameter_type" : 0,
 							"parameter_unitstyle" : 0
 						}
 
 					}
 ,
-					"varname" : "live.numbox"
+					"varname" : "Pitch"
 				}
 
 			}
@@ -262,6 +288,13 @@
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-11", 0 ],
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-9", 0 ],
 					"source" : [ "obj-10", 0 ]
@@ -393,9 +426,10 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-1" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-1" : [ "Pitch", "Pitch", 0 ],
 			"obj-10" : [ "live.text", "live.text", 0 ],
-			"obj-2" : [ "live.numbox[1]", "live.numbox", 0 ],
+			"obj-11" : [ "Note", "Note", 0 ],
+			"obj-2" : [ "Vel", "Vel", 0 ],
 			"parameterbanks" : 			{
 				"0" : 				{
 					"index" : 0,
